@@ -1,0 +1,64 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	background: #edeeed;
+}
+.drops {
+	position: relative;
+	display: flex;
+	justify-items: center;
+	align-items: center;
+}
+.drop {
+	position: absolute;
+	height: 150px;
+	width: 150px;
+	background: transparent;
+	border-radius: 50% 50% 45% 55% / 50% 45% 55% 50%;
+	/* box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.05),
+		15px 30px 15px rgba(0, 0, 0, 0.01), 15px 20px 20px rgba(0, 0, 0, 0.05),
+		inset -10px -10px 15px rgba(255, 255, 255, 1); */
+	box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.05),
+		10px 10px 10px rgba(0, 0, 0, 0.01),
+		inset -10px -10px 15px rgb(255, 255, 255);
+}
+.drop::before {
+	content: "";
+	background: #fff;
+	position: absolute;
+	top: 25px;
+	left: 35px;
+	height: 30px;
+	width: 30px;
+	border-radius: 26% 74% 25% 75% / 66% 33% 67% 34%;
+}
+.drop::after {
+	content: "";
+	background: #fff;
+	position: absolute;
+	top: 15px;
+	left: 85px;
+	height: 15px;
+	width: 15px;
+	border-radius: 26% 74% 25% 75% / 68% 33% 67% 39%;
+}
+.drop:nth-child(2) {
+	transform: scale(0.5) translate(-200px, 180px);
+	border-radius: 50% 50% 45% 55% / 50% 45% 55% 50%;
+}
+.drop:nth-child(3) {
+	transform: scale(0.5) translate(250px, 80px);
+	border-radius: 47% 39% 61% / 50% 45% 55% 50%;
+}
+.drop:nth-child(4) {
+	transform: scale(0.25) translate(0px, -480px);
+	border-radius: 51% 49% 52% 48% / 47% 48% 52% 53%;
+}
